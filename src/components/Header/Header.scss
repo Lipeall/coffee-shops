@@ -1,0 +1,55 @@
+@import "../../assets/styles/main.scss";
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    transition: .5s ease;
+
+    .brand {
+        color: $cor-primaria;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+    };
+
+    .navigation {
+
+        .navigation-items {
+
+            a {
+                position: relative;
+                color: $cor-primaria;
+                font-size: 1em;
+                font-weight: 500;
+                text-decoration: none;
+                margin-left: 30px;
+                transition: 0.3s ease;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background: $cor-primaria;
+                    width: 0;
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    transition: 0.3s ease;
+                }
+                &:hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

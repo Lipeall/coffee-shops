@@ -1,12 +1,22 @@
-import React from 'react';
+import React from "react";
+import Header from "../../components/Header/Header";
+import "./Home.scss";
 
-// Definindo o tipo para o componente
+const headerOptions = [
+    { title: "Coffee ", url: "#" },
+    { title: "About", url: "#" },
+    { title: "Explore", url: "#" },
+    { title: "Gallery", url: "#" },
+    { title: "Contact", url: "#" },
+];
+const titleHeader = { title: "COFFEE SHOPS", url: "#" };
+
 const Home: React.FC = () => {
-  return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  );
-}
+    return (
+        <>
+            <Header titleHeader={titleHeader} navItems={headerOptions} />
+        </>
+    );
+};
 
 export default Home;
