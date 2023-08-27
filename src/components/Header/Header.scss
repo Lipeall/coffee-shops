@@ -1,19 +1,10 @@
 @import "../../assets/styles/main.scss";
 
-header {
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
+.navbar {
+    background-color: pink;
     transition: .5s ease;
 
-    .brand {
+    .navbar-brand {
         color: $cor-primaria;
         font-size: 1.5em;
         font-weight: 700;
@@ -21,10 +12,8 @@ header {
         text-decoration: none;
     };
 
-    .navigation {
-
-        .navigation-items {
-
+    .navigation-items {
+        .navbar-nav {
             a {
                 position: relative;
                 color: $cor-primaria;
@@ -51,5 +40,34 @@ header {
                 }
             }
         }
+        
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 20px;
+        .container {
+            display: block;
+            .navigation-items {
+                .navbar-nav {
+                    a {
+                        margin: 0;
+                        &:hover {
+                            &:before {
+                                width: 20%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    .navbar-toggler {
+        position: absolute;
+        right: 20px;
     }
 }
+
