@@ -1,3 +1,15 @@
 $cor-primaria: #FFF;
 $cor-secundaria: #151515;
 $index-content: 888;
+$title-weight: 900;
+$title-size: 4em;
+$title-transform: uppercase;
+
+@mixin customTitleStyle {
+    font-size: 4em;
+    font-weight: $title-weight; 
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+};

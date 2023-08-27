@@ -2,36 +2,40 @@ import React, {useState} from "react";
 //Pages
 import Header from "../../components/Header/Header";
 import Kitchen from "../../assets/videos/Kitchen.mp4";
-import Home from "../Home/Home";
+import Home from "../Home";
+import About from "../About";
+
 //CSS
 import "./Main.scss";
 //Types
 import { PageContent } from "./types";
+import MediaIcons from "../../components/Media-Icons/MediaIcons";
 
 const pageContent:PageContent = {
     Home: <Home />,
-    // About: <About />,
+    About: <About />,
 };
 
 const Main: React.FC = () => {
-    const [content, setContent] =  useState("")
+    const [content, setContent] =  useState("Home");
 
     const headerOptions = [
-        { title: "About", url: () => setContent("Home")},
+        { title: "About", url: () => setContent("About")},
         { title: "Explore", url: () => setContent("Explore") },
         { title: "Gallery", url: () => setContent("Gallery") },
         { title: "Contact", url: () => setContent("Contact") },
     ];
     const titleHeader = { title: "COFFEE SHOPS", url: () => setContent("Home") };
-    
+
     return (
         <>
             <Header titleHeader={titleHeader} navItems={headerOptions} />
             <section className="main">
                 <video src={Kitchen} autoPlay muted loop />
-                <div className="content">
+                <div className={`content`}>
                     {pageContent[content]}
                 </div>
+                <MediaIcons />
             </section>
         </>
     );

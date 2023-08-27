@@ -1,8 +1,6 @@
 @import "../../assets/styles/main.scss";
 
 .main {
-
-    
     video {
         z-index: 000;
         position: absolute;
@@ -12,17 +10,6 @@
         height: 100%;
         object-fit: cover;
     };
-
-    // .content {
-    //     z-index: $index-content;
-    //     color: $cor-primaria;
-    //     width: 70%;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // };
-
-
     &::before {
         z-index: 777;
         content: "";
@@ -34,6 +21,10 @@
         top: 0;
         left: 0;
     };
+    .content {
+        position: relative;
+        z-index: 777;
+    }
 };
 
 @media (max-width: 992px) {
