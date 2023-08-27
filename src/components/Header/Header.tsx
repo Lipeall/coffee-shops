@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = ({ titleHeader, navItems }) => {
         <Navbar collapseOnSelect expand="lg">
             <Container>
                 <div>
-                    <Navbar.Brand href={titleHeader.url}>
+                    <Navbar.Brand onClick={titleHeader.url}>
                         {titleHeader.title}
                     </Navbar.Brand>
                     <Navbar.Toggle className="navbar-dark" aria-controls="responsive-navbar-nav" />
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ titleHeader, navItems }) => {
                     >
                         <Nav className="me-auto">
                             {navItems.map((item, index) => (
-                                <Nav.Link key={index} href={item.url}>
+                                <Nav.Link key={index} onClick={item.url}>
                                     {item.title}
                                 </Nav.Link>
                             ))}

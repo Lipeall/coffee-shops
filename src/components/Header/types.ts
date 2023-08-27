@@ -1,11 +1,11 @@
 interface NavItem {
     title: string,
-    url: string
+    url: () => void
 };
 
 interface TitleItem {
     title: string,
-    url: string
+    url: () => void
 };
 
 export interface HeaderProps {
