@@ -1,11 +1,9 @@
-@import "../../assets/styles/main.scss";
+@import "../../../assets/styles/main.scss";
 
 .about {
     display: flex;
-    justify-content: center;
     gap: 7em;
     align-items: center;
-    height: 100vh;
     img {
         width: 500px;
         height: 400px;

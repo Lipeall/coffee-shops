@@ -1,11 +1,9 @@
-@import "../../assets/styles/main.scss";
+@import "../../../assets/styles/main.scss";
 
 .home {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
     padding-top: 40px;
 
     .content {
@@ -83,6 +81,10 @@
             }
             a {
                 padding: 10px;
+            }
+
+            p {
+                margin-bottom: 25px
             }
 
         }

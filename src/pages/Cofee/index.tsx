@@ -1,22 +1,26 @@
 import React, {useState} from "react";
-//Pages
+//Components
 import Header from "../../components/Header/Header";
 import Kitchen from "../../assets/videos/Kitchen.mp4";
-import Home from "../Home";
-import About from "../About";
-
-//CSS
-import "./Main.scss";
-//Types
-import { PageContent } from "./types";
 import MediaIcons from "../../components/Media-Icons/MediaIcons";
+//Sections
+import Home from "./Home";
+import About from "./About";
+import Gallery from "./Gallery";
+//CSS
+import "./style.scss";
+import {CenteredContent} from "../../components/styled-components/CenteredContent";
+//Types
+import { PageSections } from "./types";
 
-const pageContent:PageContent = {
+
+const pagesections:PageSections = {
     Home: <Home />,
     About: <About />,
+    Gallery: <Gallery />
 };
 
-const Main: React.FC = () => {
+const Coffee: React.FC = () => {
     const [content, setContent] =  useState("Home");
 
     const headerOptions = [
@@ -32,13 +36,15 @@ const Main: React.FC = () => {
             <Header titleHeader={titleHeader} navItems={headerOptions} />
             <section className="main">
                 <video src={Kitchen} autoPlay muted loop />
-                <div className={`content`}>
-                    {pageContent[content]}
-                </div>
+                <CenteredContent>
+                    <div className={`content`}>
+                        {pagesections[content]}
+                    </div>
+                </CenteredContent>
                 <MediaIcons />
             </section>
         </>
     );
 };
 
-export default Main;
+export default Coffee;

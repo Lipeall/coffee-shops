@@ -1,3 +1,3 @@
-export interface PageContent {
+export interface PageSections {
     [key: string]: JSX.Element;
 }

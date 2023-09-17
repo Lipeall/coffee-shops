@@ -1,0 +1,15 @@
+@import "../../../assets/styles/main.scss";
+h4, h5 {
+    color: $cor-primaria;
+    font-weight: $title-weight;
+    font-size: $title-size;
+}
+h6 {
+    color: $cor-primaria;
+    font-weight: $title-weight;
+    font-size: 2em;
+}
+p {
+    color: $cor-primaria;
+    text-align: justify;
+}
