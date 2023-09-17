@@ -7,6 +7,7 @@ import MediaIcons from "../../components/Media-Icons/MediaIcons";
 import Home from "./Home";
 import About from "./About";
 import Gallery from "./Gallery";
+import Contact from "./Contact";
 //CSS
 import "./style.scss";
 import {CenteredContent} from "../../components/styled-components/CenteredContent";
@@ -17,17 +18,17 @@ import { PageSections } from "./types";
 const pagesections:PageSections = {
     Home: <Home />,
     About: <About />,
-    Gallery: <Gallery />
+    Gallery: <Gallery />,
+    Contact: <Contact />
 };
 
 const Coffee: React.FC = () => {
     const [content, setContent] =  useState("Home");
 
     const headerOptions = [
-        { title: "About", url: () => setContent("About")},
-        { title: "Explore", url: () => setContent("Explore") },
-        { title: "Gallery", url: () => setContent("Gallery") },
-        { title: "Contact", url: () => setContent("Contact") },
+        { title: "Sobre", url: () => setContent("About")},
+        { title: "Galeria", url: () => setContent("Gallery") },
+        { title: "Contato", url: () => setContent("Contact") },
     ];
     const titleHeader = { title: "COFFEE SHOPS", url: () => setContent("Home") };
 

@@ -2,7 +2,7 @@ import React from "react";
 import Gallery from "../../../components/Gallery/Gallery";
 import Typography from "@mui/material/Typography";
 //CSS
-import "./style.scss"
+import "./style.scss";
 
 const itemData = [
     {
@@ -83,7 +83,7 @@ const itemData = [
 const Galeria: React.FC = () => {
 
     return (
-        <div>
+        <div id="gallery">
             <Typography variant="h4" gutterBottom>
                 Tentadores Sabores: <br />
             </Typography>

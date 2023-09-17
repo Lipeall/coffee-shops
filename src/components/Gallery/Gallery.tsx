@@ -5,6 +5,7 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import BasicModal from "../Modal/Modal";
+
 //Types
 import { GalleryContent, GalleryProps } from "./types";
 
@@ -38,7 +39,6 @@ const Content: React.FC<GalleryContent> = ({ img, title, description }) => {
     );
 };
 
-
 const Gallery: React.FC<GalleryProps> = ( { data }) => {
     const [isShow, setIsShow] = useState<boolean>(false);
     const [content, setContent] = useState<GalleryContent | null>(null);
@@ -50,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ( { data }) => {
 
     return (
 		<>
-			<div style={{padding: "0 40px"}}>
+			<div id="gallery" style={{padding: "0 40px"}}>
 				<ImageList
 					cols={4}
 					sx={{ width: 800, height: 500, borderRadius: 2}}
