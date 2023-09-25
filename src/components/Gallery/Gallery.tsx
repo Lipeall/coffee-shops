@@ -51,14 +51,11 @@ const Gallery: React.FC<GalleryProps> = ( { data }) => {
     return (
 		<>
 			<div id="gallery" style={{padding: "0 40px"}}>
-				<ImageList
-					cols={4}
-					sx={{ width: 800, height: 500, borderRadius: 2}}
+				<ImageList	cols={4} sx={{ width: 800, height: 500, borderRadius: 2}}
 				>
 					{data.map((item, index) => (
 						<ImageListItem key={index}>
-							<img
-								src={`${item.img}?w=248&fit=crop&auto=format`}
+							<img src={`${item.img}?w=248&fit=crop&auto=format`}
 								srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
 								alt={item.title}
 								loading="lazy"
@@ -66,9 +63,7 @@ const Gallery: React.FC<GalleryProps> = ( { data }) => {
 							<ImageListItemBar
 								title={item.title}
 								actionIcon={
-									<IconButton
-										sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-										aria-label={`info about ${item.title}`}
+									<IconButton	sx={{ color: "rgba(255, 255, 255, 0.54)" }}	aria-label={`info about ${item.title}`}
 										onClick={() => {
 											handleOpen(true, item);
 										}}

@@ -15,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ titleHeader, navItems }) => {
                     <Navbar.Toggle className="navbar-dark" aria-controls="responsive-navbar-nav" />
                 </div>
                 <div>
+                    {/* Mobile */}
                     <Navbar.Collapse
                         id="responsive-navbar-nav"
                         className="navigation-items"

@@ -52,8 +52,7 @@ const Contato: React.FC = () => {
     };
 
     return (
-        <div
-			id="contact"
+        <div id="contact"
             style={{
                 display: "grid",
                 placeItems: "center",
@@ -66,9 +65,7 @@ const Contato: React.FC = () => {
                 zIndex: 2,
             }}
         >
-            <Typography variant="h4" gutterBottom>
-                Entre em Contato
-            </Typography>
+            <Typography variant="h4" gutterBottom>Entre em Contato</Typography>
             {mensagemEnviada ? (
                 <div>
                     <Typography variant="h5" gutterBottom>

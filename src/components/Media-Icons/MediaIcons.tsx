@@ -1,32 +1,24 @@
 import React from "react";
+//Types
+import { MediaIconsProps } from "./types"
+//CSS
 import "./MediaIcons.scss";
 
-const MediaIcons: React.FC = () => {
+
+const MediaIcons: React.FC<MediaIconsProps> = ({ mediaIcons }) => {
     return (
-        <section className="media-icons">
-            <a href="http://">
-                <img
-                    src="https://img.icons8.com/color/48/facebook-new.png"
-                    alt="facebook"
-                    className="fab fa-facebook-f"
-                />
-            </a>
-            <a href="http://">
-                <img
-                    src="https://img.icons8.com/color/48/instagram-new--v1.png"
-                    alt="instagram"
-                    className="fab fa-instagram"
-                />
-            </a>
-            <a href="https://">
-                <img
-                    src="https://img.icons8.com/color/48/twitter--v1.png"
-                    alt="twitter"
-                    className="fab fa-twitter"
-                />
-            </a>
-        </section>
+      <section className="media-icons">
+        {mediaIcons.map((icon, index) => (
+          <a href={icon.url} key={index}>
+            <img
+              src={icon.src}
+              alt={icon.alt}
+              className={icon.className}
+            />
+          </a>
+        ))}
+      </section>
     );
-};
+  };
 
 export default MediaIcons;
